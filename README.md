@@ -1,5 +1,5 @@
 # Systemtechnik-Maturaausarbeitung
-Maturaausarbeitung für Systemtechnik DezSys und SysInt
+## Maturaausarbeitung für Systemtechnik DezSys und SysInt
 
 Die Themenbereiche sind für dieses Schuljahr in Systemtechnik wie folgt festgelegt worden:
 
