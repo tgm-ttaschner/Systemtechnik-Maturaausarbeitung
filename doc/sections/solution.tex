@@ -1,0 +1,184 @@
+%!TEX root=../document.tex
+
+\section{Kompetenzen}
+\label{sec:Kompetenzen}
+\subsection{Dezentrale Systeme}
+\label{subsec:Dezentrale Systeme}
+\begin{enumerate}
+\item Können Lastverteilung auf
+Applikationsebene realisieren
+\item Können Sicherheitskonzepte für
+verteilte, dezentrale Systeme
+entwickeln
+\item Können ausfallsichere replizierte Datenbanksysteme und dezentrale Systeme installieren, warten und entwerfen
+\item Können verteilte und redundante
+Dateisysteme einsetzen
+\end{enumerate}
+
+\subsection{Systemintegration und Infrastruktur}
+\label{subsec:Systemintegration und Infrastruktur}
+\begin{enumerate}
+\item Können
+Virtualisierungstechniken
+beschreiben und diese im
+Unternehmen geeignet einsetzen
+\item Können Mechanismen zur
+Softwareverteilung
+implementieren
+\item Können in Unternehmensnetzwerken ausfallsichere und redundante informationstechnische Systemarchitekturen mit unterschiedlichen Betriebssystemen realisieren
+\item Können Fernwartungstechniken
+beschreiben und diese im
+Unternehmen geeignet umsetzen
+\end{enumerate}
+
+\section{Cloud Computing und Internet of Things}
+\label{sec:Cloud Computing und Internet of Things}
+\subsection{Systemarchitektur und Cloud Anbieter}
+\label{subsec:Systemarchitektur und Cloud Anbieter}
+Was ist eine Cloud?
+
+Welche Anbieter gibt es und welche wäre hier am geeignetsten? (AWS, Azure, Google, ...?)
+
+
+Als Alternative selber Hosten?
+
+Wenn ja, welche leistungstechnischen Dimensionen müsste die annehmen?
+
+Was ist auf lange Sicht besser?
+(in Bezug auf Kosten, Wartung, Verfügbarkeit, Skalierbarkeit, ...)
+
+Welcher Application Stack, der Load Balancing, Hochverfügbarkeit und eine automatische Skalierung ermöglichen soll, soll verwendet werden?
+
+\subsection{Kommunikation}
+\label{subsec:Kommunikation}
+Was ist P2P und wie funktioniert es?
+
+Wie funktioniert die Client-Server Architektur?
+
+Vergleich beider Architekturen
+
+Wieso P2P?
+
+Idee(n) zur konkreten Umsetzung
+
+\subsection{Fernwartung der Bojen}
+\label{subsec:Fernwartung der Bojen}
+Fernwartung via SSH
+
+Einsatz einer Administrationssoftware zum Einspielen von Updates, Erstellen und Einspielen von Backups, Überprüfen des Systemstatus ("Health Check"), ...
+(-> Performanceprobleme?)
+
+Namensgebung, Einsatz von DNS
+
+\subsection{Verteilte und redundante Dateisysteme}
+\label{subsec:Verteilte und redundante Dateisysteme}
+Was ist ein verteiltes Dateisystem?
+
+Welche Vorteile bietet ein verteiltes Dateisystem?
+
+Welche Implementierungen gibt es und welche würde sich besonders anbieten (Vergleich von HadoopFS, GlusterFS und OCFS2?)
+
+
+\section{Automatisierung, Regelung und Steuerung}
+\label{sec:Automatisierung, Regelung und Steuerung}
+\subsection{Scripting}
+\label{subsec:Scripting}
+Automatisieren von bestimmten Vorgängen mittels Shell-Scripts und Cronjobs? (z.B. Sammeln und Auswerten der Sensordaten)
+
+???
+
+Verwenden eines Caches für Softwarepakete und Konfigurationsdateien (siehe Anmerkungen auf der letzten Seite)
+
+
+\section{Security, Safety, Availability}
+\label{sec:Security, Safety, Availability}
+Einsatz einer Firewall?
+
+Vergleich von Hardware und Software Firewalls
+
+Firewall load balancen?
+
+SSH-Zugriff absichern (Key-based authentification, Verschlüsselter Traffic, Port ändern, Anzahl der fehlgeschlagenen Loginversuche pro IP limitieren, ...)
+
+Schutz vor DDoS-Attacken
+
+Was ist Port Trunking?
+
+Welche Vorteile ergeben sich daraus?
+
+Wie kann es hier praktisch angewandt werden?
+
+(-> Verfügbarkeit?)
+
+Verwendung von Containern auf Client- und Serverseite
+
+Verwendung Kubernetes auf Serverseite? (doch eher zu Internet of Things?) -> Hochverfügbarkeit mittels Kubernetes Clustern?
+
+\section{Authentication, Authorization, Accounting}
+\label{sec:Authentication, Authorization, Accounting}
+Benutzerverwaltung mittels eines Verzeichnisdienstes (LDAP)
+
+Was ist LDAP?
+
+Aufbau von LDAP
+
+Verwalten von Benutzern?
+
+LDAP load balancen und replizieren (???)
+
+Verwendung eines Key Distribution Centers und Single Sign On zwecks sicherer und einfacherer Benutzeranmeldung und Benutzerverwaltung
+
+\section{Desaster Recovery}
+\label{sec:Desaster Recovery}
+Verwendung von zentralen Client Images, im Falle eines Rollbacks
+
+Plan zur Verteilung dieser Images
+
+Anlegen und Verwahren von Backups (wann, wo, wie und wie oft?)
+
+Bildung eines Clusters, um die Möglichkeit zum Bilden eines Desasters zu minimieren
+
+Planen und Umsetzen eines Recovery Plans
+
+
+\section{Algorithmen und Protokolle}
+\label{sec:Algorithmen und Protokolle}
+Heartbeat (Checken, ob Boje noch lebt) +  konkreter Einsatz
+
+???
+
+
+
+\section{Konsistenz und Datenhaltung}
+\label{sec:Konsistenz und Datenhaltung}
+Verwendung von Samba und NFS
+
+Was ist es?
+
+Was kann es?
+
+Setup und konkrete Anwendung
+
+Verwaltung von NFS, Userrechte -> LDAP
+
+Speichern von großen Datenmengen in Rechenzentren in Clustern
+
+Evaluieren von geeigneten Dateisystemen für solche Cluster
+
+
+\section{Anmerkungen}
+\label{sec:Anmerkungen}
+Die Bojen sollten nach Möglichkeit nicht direkt von Außerhalb erreichbar sein.
+
+
+%\begin{figure}[!h]
+%	\begin{center}
+%		\includegraphics[width=1.0\linewidth]{images/grafik.png}
+%		\caption{Catopn \cite{Quelle}}
+%		\label{Label}
+%	\end{center}
+%\end{figure}
+
+%\begin{lstlisting}[frame=single, language=bash, caption=Caption]
+%
+%\end{lstlisting}
