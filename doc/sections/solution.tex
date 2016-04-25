@@ -49,17 +49,16 @@ Was ist auf lange Sicht besser?
 
 Welcher Application Stack, der Load Balancing, Hochverfügbarkeit und eine automatische Skalierung ermöglichen soll, soll verwendet werden?
 
-\subsection{Kommunikation}
-\label{subsec:Kommunikation}
-Was ist P2P und wie funktioniert es?
 
-Wie funktioniert die Client-Server Architektur?
 
-Vergleich beider Architekturen
+\subsection{Virtualisierung}
+\label{subsec:Virtualisierung}
+Container vs. VM
 
-Wieso P2P?
+Was ist Docker und was kann es?
 
-Idee(n) zur konkreten Umsetzung
+Verwalten von Containern, Vergleich von Docker Composer und Kubernetes
+
 
 \subsection{Fernwartung der Bojen}
 \label{subsec:Fernwartung der Bojen}
@@ -79,6 +78,8 @@ Welche Vorteile bietet ein verteiltes Dateisystem?
 Welche Implementierungen gibt es und welche würde sich besonders anbieten (Vergleich von HadoopFS, GlusterFS und OCFS2?)
 
 
+
+
 \section{Automatisierung, Regelung und Steuerung}
 \label{sec:Automatisierung, Regelung und Steuerung}
 \subsection{Scripting}
@@ -89,6 +90,8 @@ Automatisieren von bestimmten Vorgängen mittels Shell-Scripts und Cronjobs? (z.
 
 Verwenden eines Caches für Softwarepakete und Konfigurationsdateien (siehe Anmerkungen auf der letzten Seite)
 
+
+\textbf{EVENTUELL n-1!}
 
 \section{Security, Safety, Availability}
 \label{sec:Security, Safety, Availability}
@@ -110,9 +113,11 @@ Wie kann es hier praktisch angewandt werden?
 
 (-> Verfügbarkeit?)
 
-Verwendung von Containern auf Client- und Serverseite
+Verschlüsselte Kommunikation (SSL, TLS, HTTPS)
 
 Verwendung Kubernetes auf Serverseite? (doch eher zu Internet of Things?) -> Hochverfügbarkeit mittels Kubernetes Clustern?
+
+Abkopplung der Container zum Host
 
 \section{Authentication, Authorization, Accounting}
 \label{sec:Authentication, Authorization, Accounting}
@@ -126,6 +131,8 @@ Verwalten von Benutzern?
 
 LDAP load balancen und replizieren (???)
 
+SSH Authentifizierung LDAP?
+
 Verwendung eines Key Distribution Centers und Single Sign On zwecks sicherer und einfacherer Benutzeranmeldung und Benutzerverwaltung
 
 \section{Desaster Recovery}
@@ -138,12 +145,18 @@ Anlegen und Verwahren von Backups (wann, wo, wie und wie oft?)
 
 Bildung eines Clusters, um die Möglichkeit zum Bilden eines Desasters zu minimieren
 
+(Skalierbarkeit -> Docker?)
+
+Hot and Cold Standby
+
 Planen und Umsetzen eines Recovery Plans
 
 
 \section{Algorithmen und Protokolle}
 \label{sec:Algorithmen und Protokolle}
 Heartbeat (Checken, ob Boje noch lebt) +  konkreter Einsatz
+
+RSA vs. DSA?
 
 ???
 
@@ -161,9 +174,13 @@ Setup und konkrete Anwendung
 
 Verwaltung von NFS, Userrechte -> LDAP
 
+NAS vs. NFS?
+
 Speichern von großen Datenmengen in Rechenzentren in Clustern
 
 Evaluieren von geeigneten Dateisystemen für solche Cluster
+
+Docker, Kubernetes mit NFS kombinieren -> Images Bereitstellen (auch, wenn vielleicht Overkill)
 
 
 \section{Anmerkungen}
