@@ -1,0 +1,52 @@
+Konsistenz und Datenhaltung
+
+Sie als Experte für verteilte Dateisysteme werden damit beauftragt, die Speicher der Datenerfassungsplattform über mehrere Rechenzentren zu replizieren und zu synchronisieren.
+
++ Erklären Sie, welche Probleme die Replikation von Dateisystemen mit sich bringt.
+
++ Erläutern Sie, welche Dateisysteme für die Realisierung geeignet sind und welches davon Sie einsetzen würden.
+
++ Erläutern Sie, welche Auswirkungen der Ausfall einzelner Teile des verteilten Dateisystems hat und wie Sie diese kompensieren können.
+
+- Inkonsistenzen, Änderung an einer Stelle -> Änderung an anderen Stellen?; Lesezugriffe gleiches Ergebnis liefern -> Readlock?, Atomare Operation
+
+
+- GlusterFS, HadoopFS
+HadoopFS, hoher Datendurchsatz, Verteilung der Daten über mehrere Cluster, Unterteilung der Files in Blöcke -> Hashwert pro Block
+
+- ???
+
+
+Authentication, Authorization, Accounting
+
+Sie als Sicherheitsexperte werden damit beauftragt die Kommunikation zwischen den Bojen und der Datenerfassungsplattform so abzusichern, das sowohl die Kommunikationsendpunkte als auch der Kommunikationsinhalt abgesichert sind.
+
++ Erklären Sie, welche Sicherheitskonzepte für diese Absicherung wesentlich sind und weshalb Endpunkte und Inhalte unabhängig voneinander abgesichert werden müssen
+
++ Erläutern Sie, welche Mechanismen Sie für die Authentifizierung der Endpunkte in Frage kommen und welche Variante hier am geeignetsten ist.
+
++ Erläutern Sie, wie sie Zertifikate der Bojen automatisch (und abgesichert) aktualisieren können.
+
+- Äußerster Knotenpunkt -> Firewall (Software, Hardware), Verschlüsselung der Daten auf dem Speichermedium?, sichere Übertragung der Daten über SSL?, 
+
+
+Cloud Computing & Internet of Things
+
+Sie als Experte für Systemarchitekturen erhalten die Aufgabe eine geeignete Architektur für die Datenaggregation und -auswertung zu erstellen. Bei Auftreten eines Tsunamis kann es zu deutlichen Spitzen im Datenzugriff auf das System kommen.
+
++ Erklären Sie, auf welchen Ebenen der System- und Applikationsarchitektur eine Lastenverteilung realisiert werden kann und wodurch sich diese Lösungsmöglichkeiten unterscheiden.
+
++ Erläutern Sie, auf welcher Ebene eine Lastenverteilung für die Realisierung in Hinblick auf derartige Zugriffsspitzen am geeignetsten wäre.
+
++ Erläutern Sie, wie Sie die Lastenverteilung implementieren würden, um größere Systemausfälle (z. B. ganze Cloud-Datencenter) abzufangen.
+
+- 
+
+- 
+
+- 
+
+Firmen-Fusion
++ Als Systemadministrator des zu integrierenden Kleinbetriebs, der im Moment einen Datei-, einen Web- und einen Datenbankserver betreibt, erhalten Sie im nächsten Monat finanzielle Mittel, um einen neuen Server anschaffen zu können. Wie würden Sie diesen Server effizient einsetzen? Begründen Sie Ihre Entscheidung auch in Anbetracht der Zugriffe vom Mutterkonzern.
+
+- Backup anlegen bzw. auf bestehendes Backup zugreifen, Packen von Web- und Datenbankserver in Container (-> Docker?), automatische Skalierung über Kubernetes
